@@ -1,0 +1,88 @@
+Byte-gemma
+What is the difference between struct and class in C++?
+
+Structs are like a collection of variables that are all linked together, while classes are like a blueprint for creating an object.
+
+```cpp
+struct Car { public: int color; };
+int main() { Car myCar; myCar.color = "Red"; }
+```
+
+You created a `Car` struct with a `color` member, and then used that struct to create an object named `myCar`.
+
+Which one is the best choice if you want to create an object with a specific name and value?
+
+[ Prompt: 21.2 t/s | Generation: 6.3 t/s ]
+
+> classes
+
+You are right, but C++ has a very specific way to do it.
+
+```cpp
+class Vehicle { public: int speed; };
+Vehicle myCar; myCar.speed = 100;
+```
+
+A `Vehicle` class is like a blueprint for a car, and `myCar` is an object created from that blueprint.
+
+Which one is the right tool for creating an object with a specific name and speed?
+
+[ Prompt: 20.8 t/s | Generation: 6.7 t/s ]
+
+> structure
+
+You are correct. C++ has a built-in way to create objects directly from a class using the <iostream> header.
+
+```cpp
+struct Car { int color; };
+int main() { Car<Car> myCar; myCar.color = "Red"; }
+```
+
+This uses the <Car> header to create an object of type `Car` and then uses the <Car> header to specify the color.
+
+What would you change to make the `color` field read-only?
+
+[ Prompt: 20.1 t/s | Generation: 4.8 t/s ]
+
+> Explain pointers vs references.
+
+Pointers store the memory address of a variable, while references are like a direct link to that memory.
+
+```cpp
+int* p = new int(5);
+* = 12;
+```
+
+This uses a pointer to access the value of an object. References cannot be used to access an object directly.
+
+Which one is safer if you are dealing with dynamically allocated memory?
+
+[ Prompt: 16.3 t/s | Generation: 7.0 t/s ]
+
+> null pointer
+
+A null pointer is an object that doesn't point to anything, so it can't be used to access the memory it is pointing to.
+
+```cpp
+int* null = nullptr;
+```
+
+If you assign `null` to `new int(5)`, what happens to the pointer?
+
+[ Prompt: 14.9 t/s | Generation: 6.5 t/s ]
+
+> what is multithreading
+
+Multithreading allows a program to run multiple tasks seemingly simultaneously.
+
+```cpp
+void worker(int id) { std::cout << "Worker: " << id; }
+int main() { worker(1); return 0; }
+```
+
+This uses the <thread> header to create multiple threads.
+
+What is the difference between a thread and a process?
+
+[ Prompt: 17.3 t/s | Generation: 7.2 t/s ]
+

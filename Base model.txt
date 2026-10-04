@@ -1,0 +1,91 @@
+Base model
+> What is the difference between struct and class in C++?
+
+Okay, let’s tackle this!
+
+Let’s start with an analogy. Imagine a recipe – a struct is like a set of individual ingredients, while a class is the complete recipe itself.
+
+Here’s a tiny example:
+
+```cpp
+struct Point {
+  int x;
+  int y;
+};
+
+class Rectangle {
+  int width;
+  int height;
+
+  Rectangle(int w, int h) : width(w), height(h) {}
+
+  void print() {
+    std::cout << "Width: " << width << ", Height: " << height << std::endl;
+  }
+};
+```
+
+Now, let’s consider this:
+
+Which of the following best describes the key difference between a struct and a class in C++?
+
+a)  Structs are automatically destructed when a class is created, while classes are not.
+b)  Structs are primarily used for data storage, while classes are used for object creation and behavior.
+c)  Classes can contain member functions, while structs cannot.
+d)  Structs must have a default constructor, while classes don’t.
+
+Take a look at the `print()` method in the `Rectangle` class.  Does it have a `reset()` method?
+
+Let’s see if you’ve grasped the core concept.  What’s one thing you’d like to explore further regarding structs and classes?
+
+[ Prompt: 20.4 t/s | Generation: 7.1 t/s ]
+
+> Explain pointers vs references
+
+Okay, let’s dive into pointers and references.
+
+Think of it this way: a reference is like a *shortcut* to an existing object. It doesn’t own the object itself, but it *points to* the object.  A pointer, on the other hand, is a way to directly access and manipulate the object's memory location.
+
+Here’s a simple example:
+
+```cpp
+int x = 10;
+int &ref = x; // 'ref' is a reference to x
+//ref = 20; // This would reassign x to 20, but not affect ref.
+```
+
+In this case, `ref` is a reference to `x`.  It’s *not* an alias for `x`.  It’s a link to the same memory location.  You can’t change the value of `ref` directly; it’s just a way to access `x`.
+
+Now, let’s consider a pointer:
+
+```cpp
+int x = 10;
+int *ptr = &x; // 'ptr' is a pointer to x
+*ptr = 20; // This changes the value of x to 20
+```
+
+Here, `ptr` holds the *address* of `x`.  We can use `ptr` to access and modify the value of `x` directly.
+
+**Key Differences Summarized:**
+
+*   **References:**  A direct link to an object's memory location.
+*   **Pointers:**  A way to access an object's memory location.
+
+Do you want to try a little exercise to solidify your understanding?
+
+[ Prompt: 23.4 t/s | Generation: 6.9 t/s ]
+
+> what is multithreading
+
+Okay, let’s talk about multithreading!
+
+Imagine you’re baking a cake. You could only bake one cake at a time – you’d have to wait for it to finish before you start on the next.  Multithreading is like having multiple people baking cakes simultaneously – they can work on different parts of the cake at the same time, speeding up the whole process.
+
+Essentially, multithreading allows you to execute multiple parts of your program code *concurrently*.  Instead of one thread doing everything one after another, multiple threads can run in parallel, making your program run faster.
+
+It’s a way to divide a program into smaller tasks that can be handled by multiple threads, allowing the program to complete more tasks in a given timeframe.
+
+Does that make sense as a basic analogy?
+
+[ Prompt: 16.3 t/s | Generation: 6.2 t/s ]
+
